@@ -40,7 +40,7 @@
 extern "C" {
 
 /* Module headers. */
-#if defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_AM62A)
+#if defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_J722S) || defined(SOC_AM62A)
 #include <utils/app_init/include/app_init.h>
 #include <utils/perf_stats/include/app_perf_stats.h>
 #include <utils/ipc/include/app_ipc.h>
@@ -61,7 +61,7 @@ void displayThread()
 {
 
     int32_t status=0;
-#if defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_AM62A)
+#if defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_J722S) || defined(SOC_AM62A)
     app_perf_stats_cpu_load_t cpu_load;
 #else
     perfStatsCpuLoad cpu_load;
@@ -82,7 +82,7 @@ void displayThread()
     {
         system("clear");
 
-#if defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_AM62A)
+#if defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_J722S) || defined(SOC_AM62A)
         printf("Summary of CPU load,\n");
         printf("====================\n\n");
 
@@ -204,7 +204,7 @@ int main()
     /* Register SIGINT handler. */
     signal(SIGINT, sigHandler);
 
-#if defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_AM62A)
+#if defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_J722S) || defined(SOC_AM62A)
     /* Initialize the system. */
     status = appInit();
 
@@ -219,7 +219,7 @@ int main()
 
     gDispThreadId.join();
 
-#if defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_AM62A)
+#if defined(SOC_J721E) || defined(SOC_J721S2) || defined(SOC_J784S4) || defined(SOC_J722S) || defined(SOC_AM62A)
     printf("CALLING DE-INIT.\n");
 
     /* De-Initialize the system. */
