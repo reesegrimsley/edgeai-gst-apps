@@ -23,6 +23,7 @@ Here 'work_area' is used as the root directory for illustration.
 
 1) cd work_area/opt
 2) git clone https://github.com/TexasInstruments/edgeai-gst-apps.git
+   2a) If not setup, git clone https://git.ti.com/cgit/edgeai/edgeai-dl-inferer
 3) cd edgeai-gst-apps/apps_cpp
 4) Update cmake/setup_cross_compile.sh to specify tool paths and settings
 5) source cmake/setup_cross_compile.sh
